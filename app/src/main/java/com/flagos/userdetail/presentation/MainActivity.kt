@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import androidx.activity.viewModels
+import androidx.core.content.ContextCompat.getColor
 import com.flagos.userdetail.R
 import com.flagos.userdetail.databinding.ActivityMainBinding
 import com.flagos.userdetail.domain.Results
@@ -30,6 +31,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpViews() {
         binding.recycler.adapter = adapter
+        with(binding.swipeToRefresh) {
+            val color = getColor(this@MainActivity, R.color.yellow)
+            setColorSchemeColors(color)
+            setOnRefreshListener {
+                viewModel.fetchUserDetail()
+            }
+        }
     }
 
     private fun setUpObservers() {
@@ -67,6 +75,7 @@ class MainActivity : AppCompatActivity() {
             binding.textFailedMessage.visibility = GONE
         } else {
             binding.progress.visibility = GONE
+            binding.swipeToRefresh.isRefreshing = false
         }
     }
 

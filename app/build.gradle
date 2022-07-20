@@ -76,6 +76,7 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$navigationUiVersion"
     implementation "androidx.navigation:navigation-fragment-ktx:$navigationFragmentVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipeToRefreshVersion"
     implementation "com.google.android.material:material:$materialVersion"
     implementation "com.google.dagger:hilt-android:$hiltVersion"
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
