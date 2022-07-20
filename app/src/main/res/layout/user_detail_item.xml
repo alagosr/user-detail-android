@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_margin"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation"
+    app:cardMaxElevation="@dimen/card_elevation"
+    app:cardPreventCornerOverlap="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_user"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_size"
+            android:contentDescription="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_placeholder" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/gradient"
+            app:layout_constraintBottom_toBottomOf="@+id/text_user_location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/text_horizontal_margin"
+            android:paddingTop="@dimen/card_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_header_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_user"
+            tools:text="Alejandro Lagos" />
+
+        <TextView
+            android:id="@+id/text_user_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/text_horizontal_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_sub_header_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_user"
+            tools:text="5553280123" />
+
+        <TextView
+            android:id="@+id/text_user_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/text_horizontal_margin"
+            android:paddingBottom="@dimen/card_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_sub_header_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_user_email"
+            tools:text="Miguel Hidalgo, Mexico City, MX. " />
+
+        <TextView
+            android:id="@+id/text_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/text_horizontal_margin"
+            android:paddingTop="@dimen/card_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_sub_header_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_user_name"
+            tools:text="username" />
+
+        <TextView
+            android:id="@+id/text_user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/text_horizontal_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_sub_header_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_user_name"
+            tools:text="alagos@justo.com.mx" />
+
+
+        <!--        <ImageView
+                    android:id="@+id/image_user"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:contentDescription="@null"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/ic_placeholder" />
+
+                <TextView
+                    android:id="@+id/text_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/text_horizontal_margin"
+                    android:textSize="@dimen/text_header_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/text_user_phone_number"
+                    app:layout_constraintStart_toEndOf="@+id/image_user"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Alejandro Lagos" />
+
+                <TextView
+                    android:id="@+id/text_user_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/text_horizontal_margin"
+                    android:textSize="@dimen/text_sub_header_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/text_user_email"
+                    app:layout_constraintStart_toEndOf="@+id/image_user"
+                    app:layout_constraintTop_toBottomOf="@+id/text_user_name"
+                    tools:text="5553280123" />
+
+                <TextView
+                    android:id="@+id/text_user_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/text_horizontal_margin"
+                    android:textSize="@dimen/text_normal_size"
+                    app:layout_constraintBottom_toTopOf="@+id/text_user_location"
+                    app:layout_constraintStart_toEndOf="@+id/image_user"
+                    app:layout_constraintTop_toBottomOf="@+id/text_user_phone_number"
+                    tools:text="alagos@squareup.com" />
+
+                <TextView
+                    android:id="@+id/text_user_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/text_horizontal_margin"
+                    android:textSize="@dimen/text_normal_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/image_user"
+                    app:layout_constraintTop_toBottomOf="@+id/text_user_email"
+                    tools:text="Engineer on the Invoices team." />
+
+                <TextView
+                    android:id="@+id/text_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_small_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/text_user_name"
+                    tools:ignore="SmallSp"
+                    tools:text="username" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
