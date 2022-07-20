@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">userdetail</string>
+    <string name="app_name">Jüsto User Detail</string>
+    <string name="text_error">An error has occurred\n\n%s</string>
 </resources>
